@@ -1,0 +1,40 @@
+{% extends 'layout.html'%}
+
+{% block title%}
+    Companies
+{% endblock%}
+
+{% block body %}
+<h1>Kenya</h1>
+<h2>Kenya is one of the fastest growing companies in Africa.It has experienced a boom in its economy in the late 2000.</h2>
+<h3>Here is a list of top companies in Kenya</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Industry</th>
+            <th>Sector</th>
+            <th>Headquearters</th>
+            <th>Founded</th>
+            <th>Notes</th>         
+        </tr>
+    </thead>
+<tbody>
+
+    {% for row in companies %}
+        <tr>
+
+            <th>{{ row.id }}</th>
+            <th>{{ row.Name }}</th>
+            <th>{{ row.Industry }}</th>
+            <th>{{ row.Sector }}</th>
+            <th>{{ row.Headquearters }}</th>
+            <th>{{ row.Year }}</th>
+            <th>{{ row.Notes }}</th>
+            
+
+         </tr>
+
+    {% endfor %}
+{% endblock %}
